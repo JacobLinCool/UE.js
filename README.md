@@ -1,4 +1,4 @@
-# UE.js - User Exist?
+# UE.js - User Exists?
 A JavaScript API to check if the user exists.
 
 ## Support Sites
