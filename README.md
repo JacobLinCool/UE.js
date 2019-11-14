@@ -7,7 +7,7 @@ A JavaScript API to check if the user exists.
 
 ## Usage
 
-[Try It Online](https://jsconsole.com/?%3Aload%20https%3A//cdn.jsdelivr.net/gh/JacobLinCool/UE.js@1.0.1/js/ue.min.js%20https://cdn.jsdelivr.net/gh/JacobLinCool/UE.js@1.0.1/js/example.js)
+[Try It Online](https://jsconsole.com/?%3Aload%20https%3A//cdn.jsdelivr.net/gh/JacobLinCool/UE.js@1.1.0/js/ue.min.js)
 
 ```javascript
 ue.instagram(USERNAME).then(r=>console.log(r)); // true or false
@@ -21,3 +21,11 @@ ue.ig(USERNAME).then(r=>console.log(r)); // true or false
 Instagram: instagram, ig
 
 Github: github, gh
+
+### API
+
+```
+https://ue-instagram.1481.workers.dev/USERNAME
+
+https://ue-github.1481.workers.dev/USERNAME
+```
