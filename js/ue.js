@@ -7,32 +7,15 @@ var ue = (function () {
         if(this.checked.instagram[n] !== undefined)
             return new Promise(x=>{x(this.checked.instagram[n])});
         else
-            return fetch("https://www.instagram.com/"+n+"/")
-            .then(r=>r.text())
-            .then(a=>{
-                if(new RegExp("(@"+n.toLowerCase()+")").test(a)) {
-                    this.checked.instagram[n] = true;
-                    return true;
-                } else {
-                    this.checked.instagram[n] = false;
-                    return false;
-                }
-            });
+            return fetch("https://ue-instagram.1481.workers.dev/"+n)
+            .then(r=>r.json());
     };
     var github = function(n) {
         if(this.checked.github[n] !== undefined)
             return new Promise(x=>{x(this.checked.github[n])});
         else
-            return fetch("https://api.github.com/users/"+n)
-            .then(response => {
-                if (!response.ok) {
-                    this.checked.github[n] = false;
-                    return false;
-                } else {
-                    this.checked.github[n] = true;
-                    return true;
-                }
-            })
+            return fetch("https://ue-github.1481.workers.dev/"+n)
+            .then(r=>r.json());
     };
     return ({
         checked,
